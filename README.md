@@ -1,6 +1,418 @@
 # 🚀 Agentic Hugging Face Spaces OS
 
-> **Autonomous AI agent system for creating, deploying, and managing Hugging Face Spaces with multi-provider inference support**
+> **Autonomous AI agent system for creating, deploying, and managing Hugging Face Spaces with multi-provider inference support**🔥 You’re putting the pieces together exactly right — this is about making your Agentic Hugging Face Spaces OS capable of plug-and-play inference, with BYOK (Bring Your Own Keys) across Hugging Face, OpenRouter, and third-party providers. Exactly 💡 — Hugging Face Spaces are designed to make it super fast to go from idea → working AI app → deployed demo.
+
+Here’s a clear breakdown of how you can get started quickly:
+
+⸻
+
+🚀 Getting Started with Hugging Face Spaces
+
+<LinearProcessFlow steps={[“Choose your framework”, “Create a new Space”, “Push your code”, “Run & test instantly”, “Share with the community”]} />
+
+⸻
+
+1. Choose Your Framework
+
+Spaces support multiple runtimes:
+•	Gradio → Perfect for quick ML demos
+•	Streamlit → Data dashboards & visualizations
+•	Docker → Full custom environments
+•	Static HTML/JS → Lightweight demos
+
+⸻
+
+1. Create a New Space
+   •	Go to 👉 Hugging Face Spaces
+   •	Click “Create new Space”
+   •	Pick:
+   •	Name
+   •	Visibility (Public / Private)
+   •	Runtime (Gradio, Streamlit, Docker, etc.)
+
+⸻
+
+1. Push Your Code
+
+Spaces are Git-backed. You can:
+
+git clone https://huggingface.co/spaces/username/my-space
+cd my-space
+
+# Add your app files (app.py, requirements.txt, etc.)
+
+git add .
+git commit -m “first commit”
+git push
+
+⸻
+
+1. Run & Test Instantly
+   •	Hugging Face auto-builds your environment.
+   •	Logs are visible live in the browser.
+   •	No DevOps needed — everything is optimized for ML workloads.
+
+⸻
+
+1. Share with the Community
+   •	Every Space gets a public URL.
+   •	You can:
+   •	Embed it in articles/tutorials
+   •	Add it to a Collection
+   •	Get community feedback via likes & discussions
+
+⸻
+
+✨ That’s it — in a few clicks you can go from idea → hosted AI demo.
+Your agent vision can actually automate these steps: create Spaces, push code, deploy models, and publish educational content on its own.
+
+⸻
+
+Do you want me to draft a concrete example (like a Gradio demo app deployed to a Space) so you can see how the full workflow looks?
+
+Let’s lay it out cleanly:
+
+⸻
+
+🔑 API Keys & Inference Provider Autonomy
+
+1. Hugging Face Inference Providers
+
+Config example (MCP-enabled):
+
+{
+“servers”: {
+“hf-mcp-server”: {
+“url”: “https://huggingface.co/mcp”,
+“headers”: {
+“Authorization”: “Bearer <YOUR_HF_TOKEN>”
+}
+}
+}
+}
+
+```
+•	If custom key is set → calls go directly to provider API.
+•	If not → routed via Hugging Face infra → billed to HF account (with spend limits).
+```
+
+⸻
+
+1. Built-in Tools (Agent-Usable)
+
+Your agent can call:
+•	🔍 Spaces Semantic Search → Find AI apps
+•	📄 Papers Semantic Search → Find ML research
+•	🔎 Model Search + Details → With task/library filters
+•	🗂️ Dataset Search + Details
+•	📘 Docs Search → Explore Hugging Face documentation
+•	🖥️ Spaces Tools → Run Spaces as MCP servers
+
+⸻
+
+1. OpenRouter BYOK Integration
+   •	Use OpenRouter API keys for non-HF models (Anthropic, Google, OpenAI, etc.).
+   •	Provision & manage keys programmatically.
+   •	Priority & Fallback Logic:
+   •	If your key exists → always used first.
+   •	If rate-limited/fails → fallback to shared OpenRouter credits.
+   •	Configurable: always_use_this_key = true to disable fallback.
+
+⸻
+
+1. Agent Autonomy with Keys
+   •	Autonomous key routing: agent decides which key/provider to use per task.
+   •	Examples:
+   •	For HF-hosted models → use hf-mcp-server.
+   •	For OpenAI GPT-4o or Gemini → route through OpenRouter BYOK.
+   •	For internal Sheikh models → register custom MCP endpoint.
+
+⸻
+
+1. Unified Agentic Config
+
+We can build a single config file the agent reads:
+
+providers:
+huggingface:
+token: ${HF_TOKEN}
+mcp_url: https://huggingface.co/mcp
+openrouter:
+api_key: ${OPENROUTER_KEY}
+priority: true
+fallback: true
+sheikh:
+api_key: ${SHEIKH_KEY}
+url: https://api.sheikh.codes/v1/chat/completions
+
+⸻
+
+🌐 What This Unlocks
+•	Agents can:
+✅ Run inference on any HF model/space
+✅ Spin up Spaces as MCP microservices
+✅ Search & analyze models, datasets, papers, docs
+✅ Auto-deploy multimodal apps
+✅ Use OpenRouter BYOK for external LLMs
+✅ Manage fallback/priority across providers
+
+⸻
+
+⚡ Essentially, this gives your Agent OS a unified brain-to-infra bridge: it can call Hugging Face, OpenRouter, and your own endpoints seamlessly.
+
+⸻
+
+👉 Do you want me to design the agentic-tools.ts (Node/TypeScript MCP adapter) that auto-loads this provider config and exposes all these tools (Spaces search, Model details, Dataset search, etc.) to the agent? We can do use professional stacture maybe with logical prompt engniaring mdx l tags used Exactly 💡 — Hugging Face Spaces are designed to make it super fast to go from idea → working AI app → deployed demo.
+
+Here’s a clear breakdown of how you can get started quickly:
+
+⸻
+
+🚀 Getting Started with Hugging Face Spaces
+
+<LinearProcessFlow steps={[“Choose your framework”, “Create a new Space”, “Push your code”, “Run & test instantly”, “Share with the community”]} />
+
+⸻
+
+1. Choose Your Framework
+
+Spaces support multiple runtimes:
+•	Gradio → Perfect for quick ML demos
+•	Streamlit → Data dashboards & visualizations
+•	Docker → Full custom environments
+•	Static HTML/JS → Lightweight demos
+
+⸻
+
+1. Create a New Space
+   •	Go to 👉 Hugging Face Spaces
+   •	Click “Create new Space”
+   •	Pick:
+   •	Name
+   •	Visibility (Public / Private)
+   •	Runtime (Gradio, Streamlit, Docker, etc.)
+
+⸻
+
+1. Push Your Code
+
+Spaces are Git-backed. You can:
+
+git clone https://huggingface.co/spaces/username/my-space
+cd my-space
+
+# Add your app files (app.py, requirements.txt, etc.)
+
+git add .
+git commit -m “first commit”
+git push
+
+⸻
+
+1. Run & Test Instantly
+   •	Hugging Face auto-builds your environment.
+   •	Logs are visible live in the browser.
+   •	No DevOps needed — everything is optimized for ML workloads.
+
+⸻
+
+1. Share with the Community
+   •	Every Space gets a public URL.
+   •	You can:
+   •	Embed it in articles/tutorials
+   •	Add it to a Collection
+   •	Get community feedback via likes & discussions
+
+⸻
+
+✨ That’s it — in a few clicks you can go from idea → hosted AI demo.
+Your agent vision can actually automate these steps: create Spaces, push code, deploy models, and publish educational content on its own. Would you like me to sketch the DSL/system prompt for this “Agentic Spaces OS” (so agents know how to think, plan, build, sandbox, and deploy), or do you want me to jump straight to a repo scaffold (Spaces + Codeserver + Agent controller)? Developer frameworks are advanced coding stacks that can be used to start your next project.like we do FastAPI
+
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python based on standard Python type hints.
+
+⸻
+
+Do you want me to draft a concrete example (like a Gradio demo app deployed to a Space) so you can see how the full workflow looks?  experimental computer use capabilities to control Firefox. Computer use is a beta feature. Please be aware that computer use poses unique risks that are distinct from standard API features or chat interfaces. These risks are heightened when using computer use to interact with the internet.and Vue.js is a library for building user interfaces in JavaScript. This template uses Vite to serve your app. Grid Layout (Vercel-style)
+
+Vercel’s dashboard and marketing pages usually rely on responsive grids with cards, spacing, and hover effects. build a Vercel-style Grid layout UI (modern, responsive, minimalistic) with shadcn/ui components, and then integrate Redux for state management 🔥 Perfect — you’ve just described the dual core of the system:
+1.	Spaces Autonomy Layer → from idea → app → hosted demo → community.
+2.	Inference Providers Autonomy Layer → plug-and-play BYOK, routing, fallback, MCP tools.
+
+Let me now stitch this into a professional structured plan with logical prompt engineering (MDX-like tags), so you have something you can feed directly to your AgentOS or turn into a system prompt / design doc.
+
+⸻
+
+⚡ Agentic Hugging Face Spaces OS
+
+<LinearProcessFlow steps={[“Choose Runtime”, “Create Space”, “Push Code”, “Run & Test”, “Share”, “Automate with Keys”]} />
+
+⸻
+
+🚀 Quickstart — Hugging Face Spaces
+
+<section title="Spaces Quickstart">
+1. **Choose Your Framework**
+   - Gradio → Quick ML demos  
+   - Streamlit → Dashboards & visualizations  
+   - Docker → Full custom environments  
+   - Static HTML/JS → Lightweight demos  
+
+1. **Create New Space**
+- Go to [HF Spaces](https://huggingface.co/spaces)
+- Click “Create Space”
+- Configure → name, visibility, runtime
+1. **Push Your Code**
+   
+   ```bash
+   git clone https://huggingface.co/spaces/username/my-space
+   cd my-space
+   # add app.py + requirements.txt
+   git add .
+   git commit -m "init demo"
+   git push
+   
+    4.	Run & Test
+    •	HF auto-builds env
+    •	Live logs
+    •	No DevOps
+    5.	Share
+    •	Public URL
+    •	Embed in docs/tutorials
+    •	Add to Collections
+    •	Collect likes/discussions
+   ```
+
+</section>
+```
+
+⸻
+
+🔑 Inference Provider Autonomy
+
+<section title="Provider Autonomy">
+### Hugging Face MCP Config
+```json
+{
+  "servers": {
+    "hf-mcp-server": {
+      "url": "https://huggingface.co/mcp",
+      "headers": {
+        "Authorization": "Bearer <HF_TOKEN>"
+      }
+    }
+  }
+}
+
+```
+•	Custom key set → direct provider calls
+•	No key set → HF infra, billed to account
+```
+
+⸻
+
+Built-in Agent Tools
+•	🔍 Spaces Semantic Search
+•	📄 Papers Semantic Search
+•	🔎 Model Search & Details
+•	🗂 Dataset Search & Details
+•	📘 Docs Search
+•	🖥 Run Spaces as MCP microservices
+
+⸻
+
+OpenRouter BYOK
+•	Supports Anthropic, Google, OpenAI, etc.
+•	Priority & fallback:
+•	Prefer BYOK
+•	Fallback → shared credits
+•	Config: always_use_this_key = true
+
+⸻
+
+Unified Config Example
+
+providers:
+huggingface:
+token: ${HF_TOKEN}
+mcp_url: https://huggingface.co/mcp
+openrouter:
+api_key: ${OPENROUTER_KEY}
+priority: true
+fallback: true
+sheikh:
+api_key: ${SHEIKH_KEY}
+url: https://api.sheikh.codes/v1/chat/completions
+
+</section>
+```
+
+⸻
+
+🌐 Unlocks
+
+✅ Idea → hosted demo in minutes
+✅ Run any HF model / Space as MCP server
+✅ Search & analyze datasets, models, papers, docs
+✅ Deploy multimodal apps fully autonomously
+✅ BYOK → Hugging Face + OpenRouter + custom models
+✅ Fallback & routing across providers
+
+⸻
+
+⚡ Autonomy for All → from idea → working software → hosted app → shared portfolio.
+
+⸻Security: never commit secrets to Git. Use environment variables in CI/CD (GitHub Actions secrets / Vercel secrets / HF secrets).
+
+⸻
+
+README snippet / Integration notes
+	•	Install dependencies:
+	•	npm install js-yaml
+	•	Ensure runtime supports fetch (Node 18+). For Node <18, install node-fetch and polyfill.
+	•	Usage:
+	•	Create agentic-config.yaml (or export AGENTIC_CONFIG env var)
+	•	Import AgenticTools and use searchSpaces, searchModels, callModel() etc.
+	•	Extensions to implement next (recommended):
+	•	Add robust retry, exponential backoff, and status-code based logic
+	•	Add streaming support (WebSockets / SSE) for long-running model responses
+	•	Add observability (metrics + logs) hooks
+	•	Add permission checks / audit logs if agent will manage keys programmatically
+	•	Add role-based key provisioning endpoint to rotate keys safely
+
+⸻
+
+Want me to do the next step?
+# project="agentic-spaces" file="agentic-config.yaml" type="code"
+huggingface:
+  token: ${HF_TOKEN} # or put actual token (avoid committing secrets)
+  mcp_url: "https://huggingface.co/mcp"
+
+openrouter:
+  api_key: ${OPENROUTER_KEY}
+  url: "https://api.openrouter.ai/v1/chat/completions"
+  priority: true
+  fallback: true
+  always_use_this_key: false
+
+sheikh:
+  api_key: ${SHEIKH_KEY}
+  url: "https://api.sheikh.codes/v1/chat/completions"
+  priority: false
+
+providers:
+  custom_provider_x:
+    api_key: ""
+    url: "https://custom.provider/api/v1/infer"
+    priority: false
+    fallback: true
+I can:
+	•	generate a complete repo scaffold (Node + TypeScript + example HF Space scaffold + GitHub Actions) ready to clone and deploy, or
+	•	write a DSL/system-prompt (MDX-style) your AgentOS can consume to orchestrate “idea → plan → build → sandbox → deploy” with concrete instruction templates, or
+	•	expand agentic-tools.ts with streaming and sandbox orchestration (codeserver / docker spawn APIs) for the full agentic lifecycle.
+
+Tell me which of the above you want next and I’ll produce the code + CI + example Space ready to 
+
+👉 Next step: do you want me to write the agentic-tools.ts MCP adapter (TypeScript) that auto-loads the provider config and exposes all these HF + OpenRouter tools to your agent runtime? That would give you an actual executable integration layer. Do you write down full plan in MD and make sure logical and independent stacture /fronted /Sandbox /backends
 
 [![CI/CD](https://github.com/your-org/agentic-hf-spaces-os/workflows/CI/badge.svg)](https://github.com/your-org/agentic-hf-spaces-os/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
@@ -1041,6 +1453,521 @@ This project is licensed under the MIT License - see the <LICENSE> file for deta
 - **Discord**: Real-time community chat
 - **Email**: support@agentic-hf-spaces.com
 
------
+-----// project="agentic-spaces" file="src/agentic-tools.ts" type="code"
+import fs from "fs";
+import path from "path";
+import yaml from "js-yaml";
+
+/**
+ * Agentic Tools
+ *
+ * - Loads config from (in order): path argument -> AGENTIC_CONFIG env var -> ./agentic-config.yaml -> ./agentic-config.json
+ * - Exposes:
+ *    - searchSpaces(query)
+ *    - searchPapers(query)
+ *    - searchModels(query, filters?)
+ *    - getModelDetails(modelId)
+ *    - searchDatasets(query, filters?)
+ *    - getDatasetDetails(datasetId)
+ *    - runSpaceAsMCP(spaceId, payload)  // proxy/run call to a Space MCP endpoint
+ *    - callModel(options)  // unified inference call with BYOK + fallback routing
+ *
+ * NOTE: This module purposely returns parsed JSON and does not print secrets.
+ * Make sure your runtime provides global fetch (Node 18+). For older Node, use node-fetch/polyfill.
+ */
+
+type ProviderConfig = {
+  huggingface?: {
+    token?: string;
+    mcp_url?: string;
+  };
+  openrouter?: {
+    api_key?: string;
+    priority?: boolean;
+    fallback?: boolean;
+    url?: string; // optional custom openrouter url
+    always_use_this_key?: boolean;
+  };
+  sheikh?: {
+    api_key?: string;
+    url?: string;
+    priority?: boolean;
+  };
+  // generic providers (map of providerName -> { api_key, url, priority, fallback, always_use_this_key })
+  providers?: Record<
+    string,
+    {
+      api_key?: string;
+      url?: string;
+      priority?: boolean;
+      fallback?: boolean;
+      always_use_this_key?: boolean;
+    }
+  >;
+  openrouter_shared_credit_url?: string; // optional fallback route
+};
+
+type CallModelOptions = {
+  provider?: string; // "huggingface" | "openrouter" | "sheikh" | custom provider key from providers
+  model?: string; // model id string for provider
+  input: any; // request payload body (structured per provider)
+  prefer?: string[]; // provider preference list used to override default priority
+  timeoutMs?: number;
+  // provider-specific flags
+  alwaysUseKey?: boolean;
+};
+
+const DEFAULT_CONFIG_FILES = [
+  process.env.AGENTIC_CONFIG || "",
+  "./agentic-config.yaml",
+  "./agentic-config.yml",
+  "./agentic-config.json",
+];
+
+export class AgenticTools {
+  config: ProviderConfig;
+
+  constructor(configPath?: string) {
+    this.config = this.loadConfig(configPath);
+  }
+
+  // ----- Config loader -----
+  loadConfig(configPath?: string): ProviderConfig {
+    const tried = new Set<string>();
+
+    const tryLoad = (p: string) => {
+      if (!p) return undefined;
+      if (tried.has(p)) return undefined;
+      tried.add(p);
+      try {
+        const content = fs.readFileSync(path.resolve(p), "utf8");
+        if (p.endsWith(".yaml") || p.endsWith(".yml")) {
+          return yaml.load(content) as ProviderConfig;
+        } else {
+          return JSON.parse(content) as ProviderConfig;
+        }
+      } catch (err) {
+        return undefined;
+      }
+    };
+
+    if (configPath) {
+      const conf = tryLoad(configPath);
+      if (conf) return conf;
+    }
+
+    for (const f of DEFAULT_CONFIG_FILES) {
+      const conf = tryLoad(f);
+      if (conf) return conf;
+    }
+
+    // Fallback to environment variables
+    const envConf: ProviderConfig = {};
+    if (process.env.HF_TOKEN) {
+      envConf.huggingface = { token: process.env.HF_TOKEN, mcp_url: process.env.HF_MCP_URL };
+    }
+    if (process.env.OPENROUTER_KEY) {
+      envConf.openrouter = { api_key: process.env.OPENROUTER_KEY, url: process.env.OPENROUTER_URL };
+    }
+    if (process.env.SHEIKH_KEY) {
+      envConf.sheikh = { api_key: process.env.SHEIKH_KEY, url: process.env.SHEIKH_URL };
+    }
+    // If still empty, return empty object
+    return envConf;
+  }
+
+  // ----- Helpers -----
+  private async _fetch(url: string, opts: RequestInit = {}) {
+    // Simple wrapper for fetch with minimal error handling
+    const res = await fetch(url, opts);
+    const contentType = res.headers.get("content-type") || "";
+    const isJson = contentType.includes("application/json");
+    const body = isJson ? await res.json().catch(() => null) : await res.text().catch(() => null);
+    if (!res.ok) {
+      const err = new Error(`HTTP ${res.status} ${res.statusText}`);
+      (err as any).status = res.status;
+      (err as any).body = body;
+      throw err;
+    }
+    return body;
+  }
+
+  // ----- High-level Search / Tools (these use HF public APIs by default) -----
+  async searchSpaces(query: string, limit = 10) {
+    // Hugging Face Spaces search API (public web endpoint)
+    // Note: rate-limits apply. This uses HF web search endpoint.
+    const url = `https://huggingface.co/api/spaces?search=${encodeURIComponent(query)}&limit=${limit}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  async searchPapers(query: string, limit = 10) {
+    const url = `https://huggingface.co/api/papers?search=${encodeURIComponent(query)}&limit=${limit}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  async searchModels(query: string, filters?: Record<string, string>, limit = 12) {
+    const params = new URLSearchParams();
+    params.set("search", query);
+    if (limit) params.set("limit", String(limit));
+    if (filters) {
+      Object.entries(filters).forEach(([k, v]) => params.set(k, v));
+    }
+    const url = `https://huggingface.co/api/models?${params.toString()}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  async getModelDetails(modelId: string) {
+    const url = `https://huggingface.co/api/models/${encodeURIComponent(modelId)}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  async searchDatasets(query: string, filters?: Record<string, string>, limit = 12) {
+    const params = new URLSearchParams();
+    params.set("search", query);
+    if (limit) params.set("limit", String(limit));
+    if (filters) Object.entries(filters).forEach(([k, v]) => params.set(k, v));
+    const url = `https://huggingface.co/api/datasets?${params.toString()}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  async getDatasetDetails(datasetId: string) {
+    const url = `https://huggingface.co/api/datasets/${encodeURIComponent(datasetId)}`;
+    return this._fetch(url, { method: "GET" });
+  }
+
+  /**
+   * runSpaceAsMCP
+   * - Uses huggingface.mcp_url if provided in config
+   * - Or attempts to call a Space's inference endpoint directly (if public)
+   */
+  async runSpaceAsMCP(spaceId: string, pathSuffix = "api/predict", body: any = {}) {
+    const mcpUrl = this.config.huggingface?.mcp_url;
+    if (mcpUrl) {
+      const url = new URL(mcpUrl);
+      // Compose path: /mcp/spaces/{spaceId}/...
+      url.pathname = path.posix.join(url.pathname, "spaces", spaceId, pathSuffix);
+      return this._fetch(url.toString(), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${this.config.huggingface?.token ?? ""}` },
+        body: JSON.stringify(body),
+      });
+    }
+
+    // Fallback: call the Space's api endpoint directly (works for many Gradio/Streamlit apps)
+    const url = `https://hf.space/embed/${encodeURIComponent(spaceId)}/${pathSuffix}`;
+    return this._fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+  }
+
+  /**
+   * callModel
+   * - Unified model caller
+   * - Orders providers by prefer[] -> configured priority flags -> default order
+   * - honors provider.always_use_this_key to prevent fallback
+   */
+  async callModel(opts: CallModelOptions) {
+    const prefer = opts.prefer ?? [];
+    // Build candidate list in order:
+    const candidates: { name: string; type: string; cfg: any }[] = [];
+
+    // Helper to push provider if config exists
+    const pushIf = (name: string, cfg: any) => {
+      if (!cfg) return;
+      candidates.push({ name, type: name, cfg });
+    };
+
+    // 1) preferred explicit list
+    for (const p of prefer) {
+      if (p === "huggingface" && this.config.huggingface) pushIf("huggingface", this.config.huggingface);
+      if (p === "openrouter" && this.config.openrouter) pushIf("openrouter", this.config.openrouter);
+      if (p === "sheikh" && this.config.sheikh) pushIf("sheikh", this.config.sheikh);
+      if (this.config.providers && this.config.providers[p]) pushIf(p, this.config.providers[p]);
+    }
+
+    // 2) providers flagged as priority
+    if (this.config.openrouter?.priority && !candidates.find((c) => c.name === "openrouter") && this.config.openrouter) {
+      pushIf("openrouter", this.config.openrouter);
+    }
+    if (this.config.sheikh?.priority && !candidates.find((c) => c.name === "sheikh") && this.config.sheikh) {
+      pushIf("sheikh", this.config.sheikh);
+    }
+
+    // 3) known provider defaults in preferred order: huggingface -> openrouter -> sheikh -> others
+    if (!candidates.find((c) => c.name === "huggingface") && this.config.huggingface) pushIf("huggingface", this.config.huggingface);
+    if (!candidates.find((c) => c.name === "openrouter") && this.config.openrouter) pushIf("openrouter", this.config.openrouter);
+    if (!candidates.find((c) => c.name === "sheikh") && this.config.sheikh) pushIf("sheikh", this.config.sheikh);
+    if (this.config.providers) {
+      for (const [k, v] of Object.entries(this.config.providers)) {
+        if (!candidates.find((c) => c.name === k)) pushIf(k, v);
+      }
+    }
+
+    // If explicit provider requested, prioritize it first
+    if (opts.provider) {
+      const idx = candidates.findIndex((c) => c.name === opts.provider);
+      if (idx >= 0) {
+        const [p] = candidates.splice(idx, 1);
+        candidates.unshift(p);
+      } else {
+        // add requested provider stub (may be external)
+        const cfg = (this.config.providers && this.config.providers[opts.provider]) || {};
+        candidates.unshift({ name: opts.provider, type: opts.provider, cfg });
+      }
+    }
+
+    // Try each candidate applying fallback rules
+    let lastErr: Error | null = null;
+    for (const cand of candidates) {
+      try {
+        // If always_use_this_key is true and there's no api_key, skip
+        if (cand.cfg.always_use_this_key && !cand.cfg.api_key && cand.name !== "huggingface" && cand.name !== "sheikh") {
+          // must skip — misconfigured
+          continue;
+        }
+
+        if (cand.name === "huggingface") {
+          const token = cand.cfg.token;
+          if (!token) {
+            // If no token, HF infra routing may still work — call public inference endpoint if model supports
+            // We'll attempt a web inference call for convenience (this is limited/fragile)
+            return await this.callHuggingFaceInference(opts.model!, opts.input, undefined);
+          } else {
+            return await this.callHuggingFaceInference(opts.model!, opts.input, token);
+          }
+        }
+
+        if (cand.name === "openrouter") {
+          // OpenRouter expects JSON body with model + input etc using their API; default URL if not provided
+          return await this.callOpenRouter(opts.model!, opts.input, cand.cfg.api_key, cand.cfg.url);
+        }
+
+        if (cand.name === "sheikh") {
+          return await this.callCustomProvider(cand.cfg.url, cand.cfg.api_key, opts.model!, opts.input);
+        }
+
+        // generic provider
+        if (cand.cfg.url && cand.cfg.api_key) {
+          return await this.callCustomProvider(cand.cfg.url, cand.cfg.api_key, opts.model!, opts.input);
+        }
+      } catch (err: any) {
+        lastErr = err;
+        // if provider had always_use_this_key true -> do not fallback further
+        if (cand.cfg && cand.cfg.always_use_this_key) {
+          throw new Error(`Provider ${cand.name} failed and is marked always_use_this_key; aborting. Cause: ${err?.message || err}`);
+        }
+        // Otherwise continue to next provider (fallback)
+      }
+    }
+
+    // final fallback: openrouter shared credits (if configured)
+    if (this.config.openrouter?.fallback && this.config.openrouter?.url) {
+      try {
+        return await this.callOpenRouter(opts.model!, opts.input, undefined, this.config.openrouter.url);
+      } catch (err) {
+        lastErr = err as Error;
+      }
+    }
+
+    throw new Error(`All candidate providers failed. Last error: ${lastErr?.message || "unknown"}`);
+  }
+
+  // ----- Provider-specific methods -----
+  private async callHuggingFaceInference(modelId: string, input: any, token?: string) {
+    // Common HF inference endpoint: https://api-inference.huggingface.co/models/{model}
+    const url = `https://api-inference.huggingface.co/models/${encodeURIComponent(modelId)}`;
+    const headers: any = { "Content-Type": "application/json" };
+    if (token) headers["Authorization"] = `Bearer ${token}`;
+    return this._fetch(url, { method: "POST", headers, body: JSON.stringify(input) });
+  }
+
+  private async callOpenRouter(modelId: string, input: any, apiKey?: string, baseUrl?: string) {
+    // Example OpenRouter-compatible wrapper:
+    // POST { model, input } -> returned JSON
+    const url = baseUrl ?? "https://api.openrouter.ai/v1/chat/completions";
+    const headers: any = { "Content-Type": "application/json" };
+    if (apiKey) headers["Authorization"] = `Bearer ${apiKey}`;
+    const body = { model: modelId, input };
+    return this._fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+  }
+
+  private async callCustomProvider(url: string, apiKey: string | undefined, modelId: string, input: any) {
+    if (!url) throw new Error("Provider URL missing");
+    const headers: any = { "Content-Type": "application/json" };
+    if (apiKey) headers["Authorization"] = `Bearer ${apiKey}`;
+    const body = { model: modelId, input };
+    return this._fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+  }
+}
+
+// ----- Example quick-run / usage -----
+// (Copy into an async function / top-level await environment)
+/*
+import { AgenticTools } from "./src/agentic-tools";
+
+(async () => {
+  const tools = new AgenticTools("./agentic-config.yaml");
+
+  // Search spaces
+  const spaces = await tools.searchSpaces("image captioning");
+  console.log("Found spaces:", spaces.length);
+
+  // Search models
+  const models = await tools.searchModels("clip");
+  console.log("Model sample:", models[0]?.id);
+
+  // Call a model (tries providers in config)
+  const res = await tools.callModel({
+    model: "openai/gpt-4o-mini", // depends on provider routing
+    input: { messages: [{ role: "user", content: "Say hi" }] },
+    prefer: ["openrouter", "huggingface"],
+  });
+  console.log("Inference result:", res);
+})();
+*/
+
+export default AgenticTools;
 
 **Made with ❤️ by the Agentic AI community**
+
+
+Nice — here’s a production-minded TypeScript module that:
+	•	auto-loads a provider config file (YAML/JSON or environment variables)
+	•	exposes high-level tools your agent will call (Spaces search, Papers search, Model/ Dataset search, Model details, run Space as MCP, unified callModel with BYOK + fallback)
+	•	supports provider priority, always_use_this_key, and fallback logic (OpenRouter/shared credits)
+	•	is framework-agnostic (works in Node 18+ or Deno-like runtimes with fetch)
+	•	includes thorough comments and example usage
+🔥 Perfect — you’ve just described the dual core of the system:
+	1.	Spaces Autonomy Layer → from idea → app → hosted demo → community.
+	2.	Inference Providers Autonomy Layer → plug-and-play BYOK, routing, fallback, MCP tools.
+
+Let me now stitch this into a professional structured plan with logical prompt engineering (MDX-like tags), so you have something you can feed directly to your AgentOS or turn into a system prompt / design doc.
+
+⸻
+
+⚡ Agentic Hugging Face Spaces OS
+
+<LinearProcessFlow steps={[“Choose Runtime”, “Create Space”, “Push Code”, “Run & Test”, “Share”, “Automate with Keys”]} />
+
+⸻
+
+🚀 Quickstart — Hugging Face Spaces
+
+<section title="Spaces Quickstart">
+1. **Choose Your Framework**
+   - Gradio → Quick ML demos  
+   - Streamlit → Dashboards & visualizations  
+   - Docker → Full custom environments  
+   - Static HTML/JS → Lightweight demos  
+
+2. **Create New Space**
+   - Go to [HF Spaces](https://huggingface.co/spaces)  
+   - Click “Create Space”  
+   - Configure → name, visibility, runtime  
+
+3. **Push Your Code**
+   ```bash
+   git clone https://huggingface.co/spaces/username/my-space
+   cd my-space
+   # add app.py + requirements.txt
+   git add .
+   git commit -m "init demo"
+   git push
+
+	4.	Run & Test
+	•	HF auto-builds env
+	•	Live logs
+	•	No DevOps
+	5.	Share
+	•	Public URL
+	•	Embed in docs/tutorials
+	•	Add to Collections
+	•	Collect likes/discussions
+
+</section>
+```
+
+
+
+⸻
+
+🔑 Inference Provider Autonomy
+
+<section title="Provider Autonomy">
+### Hugging Face MCP Config
+```json
+{
+  "servers": {
+    "hf-mcp-server": {
+      "url": "https://huggingface.co/mcp",
+      "headers": {
+        "Authorization": "Bearer <HF_TOKEN>"
+      }
+    }
+  }
+}
+
+	•	Custom key set → direct provider calls
+	•	No key set → HF infra, billed to account
+
+⸻
+
+Built-in Agent Tools
+	•	🔍 Spaces Semantic Search
+	•	📄 Papers Semantic Search
+	•	🔎 Model Search & Details
+	•	🗂 Dataset Search & Details
+	•	📘 Docs Search
+	•	🖥 Run Spaces as MCP microservices
+
+⸻
+
+OpenRouter BYOK
+	•	Supports Anthropic, Google, OpenAI, etc.
+	•	Priority & fallback:
+	•	Prefer BYOK
+	•	Fallback → shared credits
+	•	Config: always_use_this_key = true
+
+⸻
+
+Unified Config Example
+
+providers:
+  huggingface:
+    token: ${HF_TOKEN}
+    mcp_url: https://huggingface.co/mcp
+  openrouter:
+    api_key: ${OPENROUTER_KEY}
+    priority: true
+    fallback: true
+  sheikh:
+    api_key: ${SHEIKH_KEY}
+    url: https://api.sheikh.codes/v1/chat/completions
+
+</section>
+```
+
+
+
+⸻
+
+🌐 Unlocks
+
+✅ Idea → hosted demo in minutes
+✅ Run any HF model / Space as MCP server
+✅ Search & analyze datasets, models, papers, docs
+✅ Deploy multimodal apps fully autonomously
+✅ BYOK → Hugging Face + OpenRouter + custom models
+✅ Fallback & routing across providers
+
+⸻
+
+⚡ Autonomy for All → from idea → working software → hosted app → shared portfolio.
+
+⸻
+
+👉 Next step: do you want me to write the agentic-tools.ts MCP adapter (TypeScript) that auto-loads the provider config and exposes all these HF + OpenRouter tools to your agent runtime? That would give you an actual executable integration layer.
+Drop this into your AgentOS runtime and call the exported class. You can adapt/extend each low-level call to match your infra or to add streaming, retries, circuit-breakers, metrics, etc.
