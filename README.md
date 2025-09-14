@@ -32,20 +32,6 @@ Spaces support multiple runtimes:
 
 ⸻
 
-1. Push Your Code
-
-Spaces are Git-backed. You can:
-
-git clone https://huggingface.co/spaces/username/my-space
-cd my-space
-
-# Add your app files (app.py, requirements.txt, etc.)
-
-git add .
-git commit -m “first commit”
-git push
-
-⸻
 
 1. Run & Test Instantly
    •	Hugging Face auto-builds your environment.
