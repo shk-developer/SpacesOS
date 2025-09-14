@@ -1,0 +1,22 @@
+huggingface:
+  token: ${HF_TOKEN} # or put actual token (avoid committing secrets)
+  mcp_url: "https://huggingface.co/mcp"
+
+openrouter:
+  api_key: ${OPENROUTER_KEY}
+  url: "https://api.openrouter.ai/v1/chat/completions"
+  priority: true
+  fallback: true
+  always_use_this_key: false
+
+sheikh:
+  api_key: ${SHEIKH_KEY}
+  url: "https://api.sheikh.codes/v1/chat/completions"
+  priority: false
+
+providers:
+  custom_provider_x:
+    api_key: ""
+    url: "https://custom.provider/api/v1/infer"
+    priority: false
+    fallback: true
