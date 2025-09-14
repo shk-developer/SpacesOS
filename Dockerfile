@@ -1,22 +1,20 @@
-# Multi-stage build for SpacesOS
-FROM node:18-alpine AS builder
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
 
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
+# Set the working directory in the container
+WORKDIR /code
 
-FROM node:18-alpine AS runner
-WORKDIR /app
+# Copy the requirements file into the container at /code
+COPY ./backend/requirements.txt /code/requirements.txt
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S spacesos -u 1001
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY --from=builder --chown=spacesos:nodejs /app/node_modules ./node_modules
-COPY --chown=spacesos:nodejs . .
+# Copy the backend code into the container at /code
+COPY ./backend /code/app
 
-USER spacesos
+# Expose the port the app runs on
+EXPOSE 8000
 
-EXPOSE 3000
-ENV NODE_ENV production
-
-CMD ["npm", "start"]
+# Command to run the application
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

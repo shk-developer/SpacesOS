@@ -1,19 +1,22 @@
 version: "1"
 
 services:
-  - hostname: app
-    type: nodejs@20
+  - hostname: backend
+    type: python@3.9
+    buildFromGit: .
     build:
-      engine: npm
-      base: "./"
+      - pip install -r backend/requirements.txt
+    start: uvicorn backend.app.main:app --host 0.0.0.0 --port 8080
     enableSubdomainAccess: true
-    env:
-      NODE_ENV: production
     ports:
-      - port: 3000
+      - port: 8080
         http: true
-    deploy:
-      build:
-        - npm install
-        - npm run build
-      start: npm start
+
+  - hostname: frontend
+    type: nodejs@18
+    buildFromGit: .
+    build:
+      - cd frontend && npm install && npm run build
+    static:
+      - root: ./frontend/dist
+    enableSubdomainAccess: true

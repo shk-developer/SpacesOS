@@ -1,17 +1,19 @@
 {
-  "install": "npm install",
-  "start": "npm start",
+  "install": "cd frontend && npm install",
+  "start": "cd frontend && npm run dev",
   "watch": {
     "install": {
       "include": [
-        "^package\\.json$",
-        "\\.js$"
+        "^frontend/package\\.json$"
       ]
     },
     "restart": {
       "include": [
-        "^package\\.json$",
-        "\\.js$"
+        "^frontend/.*\\.js$",
+        "^frontend/.*\\.jsx$"
+      ],
+      "exclude": [
+        "^frontend/node_modules/"
       ]
     },
     "throttle": 1000
