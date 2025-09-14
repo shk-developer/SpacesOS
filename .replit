@@ -1,0 +1,25 @@
+# Replit configuration for SpacesOS
+language = "nodejs"
+run = "npm start"
+
+[nix]
+channel = "stable"
+
+[env]
+NODE_ENV = "development"
+
+[unitTest]
+language = "nodejs"
+
+[languages.javascript]
+pattern = "**/*.js"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[debugger]
+support = true

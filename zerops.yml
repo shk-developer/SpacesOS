@@ -1,0 +1,19 @@
+version: "1"
+
+services:
+  - hostname: app
+    type: nodejs@20
+    build:
+      engine: npm
+      base: "./"
+    enableSubdomainAccess: true
+    env:
+      NODE_ENV: production
+    ports:
+      - port: 3000
+        http: true
+    deploy:
+      build:
+        - npm install
+        - npm run build
+      start: npm start

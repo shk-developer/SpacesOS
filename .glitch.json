@@ -1,0 +1,19 @@
+{
+  "install": "npm install",
+  "start": "npm start",
+  "watch": {
+    "install": {
+      "include": [
+        "^package\\.json$",
+        "\\.js$"
+      ]
+    },
+    "restart": {
+      "include": [
+        "^package\\.json$",
+        "\\.js$"
+      ]
+    },
+    "throttle": 1000
+  }
+}
